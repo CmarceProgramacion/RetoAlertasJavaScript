@@ -2,6 +2,8 @@ package com.herokuapp.stepdefinitions;
 
 import com.herokuapp.questions.ValidatePhraseAlerts;
 import com.herokuapp.tasks.SelectAlertAcceptTask;
+import com.herokuapp.tasks.SelectAlertConfirmTask;
+import com.herokuapp.tasks.SelectAlertPromptTask;
 import com.herokuapp.userinterfaces.HomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -29,6 +31,9 @@ public class SelectAlertStepDefinitions {
 
     @When("I select JS Confirm and interact with the alert")
     public void iSelectJSConfirmAndInteractWithTheAlert() {
+        theActorInTheSpotlight().attemptsTo(
+                SelectAlertConfirmTask.confirmAlert()
+        );
 
     }
 
