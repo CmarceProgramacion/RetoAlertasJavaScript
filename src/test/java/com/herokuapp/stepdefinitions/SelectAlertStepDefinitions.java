@@ -34,12 +34,13 @@ public class SelectAlertStepDefinitions {
         theActorInTheSpotlight().attemptsTo(
                 SelectAlertConfirmTask.confirmAlert()
         );
-
     }
 
     @When("I select JS Prompt interact with the alert and enter the phrase {string}")
-    public void iSelectJSPromptInteractWithTheAlertAndEnterThePhrase(String string) {
-
+    public void iSelectJSPromptInteractWithTheAlertAndEnterThePhrase(String phrase) {
+        theActorInTheSpotlight().attemptsTo(
+                SelectAlertPromptTask.writeInAlert(phrase)
+        );
     }
 
     @Then("verify that Result appears with the phrase {string}")

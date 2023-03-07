@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features="src/test/resources/features/select_alerts.feature",
         glue="com.herokuapp.stepdefinitions",
-        tags=" @CaseTwo",
+        tags="@Alerts",
         plugin={"pretty"},
         snippets=CucumberOptions.SnippetType.CAMELCASE
 )
