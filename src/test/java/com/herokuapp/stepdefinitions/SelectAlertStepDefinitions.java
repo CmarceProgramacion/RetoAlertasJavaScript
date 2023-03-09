@@ -1,7 +1,6 @@
 package com.herokuapp.stepdefinitions;
 
 import com.herokuapp.exceptions.ComparisonException;
-import com.herokuapp.questions.ValidatePhraseAlerts;
 import com.herokuapp.tasks.SelectAlertAcceptTask;
 import com.herokuapp.tasks.SelectAlertConfirmTask;
 import com.herokuapp.tasks.SelectAlertPromptTask;
@@ -10,7 +9,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
-import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 
@@ -18,10 +16,6 @@ import static com.herokuapp.userinterfaces.JavaScriptAlertsPage.LABEL_MESSAGE;
 import static com.herokuapp.utils.enums.MessageExceptions.MESSAGE_NOT_EQUAL;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
-import static org.fluentlenium.core.filter.MatcherConstructor.contains;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.equalTo;
 
 public class SelectAlertStepDefinitions {
     @Given("that I access the herokuapp platform")
@@ -61,8 +55,8 @@ public class SelectAlertStepDefinitions {
     @Then("verify that Result appears with the phrase {string}")
     public void verifyThatResultAppearsWithThePhrase(String phrase) {
         theActorInTheSpotlight().should(
-               GivenWhenThen.seeThat(the(LABEL_MESSAGE), WebElementStateMatchers.containsText(phrase))
-                        .orComplainWith(ComparisonException.class, MESSAGE_NOT_EQUAL.getMessageException()+phrase)
+                GivenWhenThen.seeThat(the(LABEL_MESSAGE), WebElementStateMatchers.containsText(phrase))
+                        .orComplainWith(ComparisonException.class, MESSAGE_NOT_EQUAL.getMessageException() + phrase)
         );
     }
 }

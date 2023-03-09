@@ -13,7 +13,7 @@ import static com.herokuapp.utils.enums.OptionAlertEnum.OPTIONS_EXAMPLES_ALERTS;
 
 public class SelectAlertConfirmTask implements Task {
 
-    public static Performable confirmAlert(){
+    public static Performable confirmAlert() {
         return Tasks.instrumented(SelectAlertConfirmTask.class);
     }
 

@@ -3,7 +3,7 @@
 #language: en
 
 @Alerts
-Feature: validate that the alerts
+Feature: Validate that the alerts
   As an automator
   I want to use javaScript alerts
   To validate its functionality
@@ -12,7 +12,7 @@ Feature: validate that the alerts
     Given that I access the herokuapp platform
 
   @CaseOne
-  Scenario Outline:validate the JS alert accept
+  Scenario Outline: Validate the JS alert accept
     When I select JS alert and interact with the alert
     Then verify that Result appears with the phrase "<phrase>"
     Examples:
@@ -21,7 +21,7 @@ Feature: validate that the alerts
 
 
   @CaseTwo
-  Scenario Outline:validate the JS Confirm
+  Scenario Outline: Validate the JS Confirm
     When  I select JS Confirm and interact with the alert
     Then verify that Result appears with the phrase "<phrase>"
 
@@ -31,7 +31,7 @@ Feature: validate that the alerts
 
 
   @CaseThree
-  Scenario Outline: validate the JS Prompt
+  Scenario Outline: Validate the JS Prompt
     When  I select JS Prompt interact with the alert and enter the phrase "<phrase>"
     Then verify that Result appears with the phrase "<phrase>"
 

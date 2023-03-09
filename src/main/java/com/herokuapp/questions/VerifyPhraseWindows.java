@@ -5,15 +5,15 @@ import net.serenitybdd.screenplay.Question;
 
 import static com.herokuapp.userinterfaces.MultipleWindowsPage.LABEL_MESSAGE_NEW_WINDOW;
 
-public class ValidatePhraseWindows implements Question<Boolean> {
+public class VerifyPhraseWindows implements Question<Boolean> {
     private String phrase;
 
-    public ValidatePhraseWindows(String phrase) {
+    public VerifyPhraseWindows(String phrase) {
         this.phrase = phrase;
     }
 
-    public static ValidatePhraseWindows verify(String phrase) {
-        return new ValidatePhraseWindows(phrase);
+    public static VerifyPhraseWindows verify(String phrase) {
+        return new VerifyPhraseWindows(phrase);
     }
 
     @Override

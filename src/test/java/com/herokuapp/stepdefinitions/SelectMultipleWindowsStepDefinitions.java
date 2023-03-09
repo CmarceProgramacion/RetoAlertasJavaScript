@@ -1,6 +1,6 @@
 package com.herokuapp.stepdefinitions;
 
-import com.herokuapp.questions.ValidatePhraseWindows;
+import com.herokuapp.questions.VerifyPhraseWindows;
 import com.herokuapp.tasks.SelectMultipleWindowsTask;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,10 +16,10 @@ public class SelectMultipleWindowsStepDefinitions {
         );
     }
 
-    @Then("I verify the content of the window that contain the phrase {string}")
-    public void iVerifyTheContentOfTheWindowThatContainThePhrase(String phrase) {
+    @Then("verify the content of the window that contain the phrase {string}")
+    public void verifyTheContentOfTheWindowThatContainThePhrase(String phrase) {
         OnStage.theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(ValidatePhraseWindows.verify(phrase))
+                GivenWhenThen.seeThat(VerifyPhraseWindows.verify(phrase))
         );
     }
 }
