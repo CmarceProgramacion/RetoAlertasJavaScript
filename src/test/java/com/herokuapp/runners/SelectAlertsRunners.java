@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features="src/test/resources/features/select_alerts.feature",
-        glue="com.herokuapp.stepdefinitions",
-        tags="@Alerts",
-        plugin={"pretty"},
-        snippets=CucumberOptions.SnippetType.CAMELCASE
+        features = "src/test/resources/features/select_alerts.feature",
+        glue = "com.herokuapp.stepdefinitions",
+        tags = "@Alerts",
+        plugin = {"pretty"},
+        snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 
 public class SelectAlertsRunners {

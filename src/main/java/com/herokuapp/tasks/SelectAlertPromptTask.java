@@ -23,7 +23,6 @@ public class SelectAlertPromptTask implements Task {
         return Tasks.instrumented(SelectAlertPromptTask.class, message);
     }
 
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -32,6 +31,5 @@ public class SelectAlertPromptTask implements Task {
                 EnterValueToAlertAction.withTheData(message),
                 Switch.toAlert().andAccept()
         );
-
     }
 }

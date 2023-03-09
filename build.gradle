@@ -6,8 +6,8 @@ apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 group 'com.herokuapp'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     mavenCentral()
